@@ -17,7 +17,7 @@ namespace GestionEquipos
 
         public Equipo(string nombre,string categoria)
         {
-            this.Nombre = nombre;
+            this.nombre = nombre;
             this.categoria = categoria;
             jugadores = new List<Jugador>();
         }

@@ -29,5 +29,6 @@ namespace GestionEquipos
             this.nombreEstadio = nombreEstadio;
         }
 
+
     }
 }
