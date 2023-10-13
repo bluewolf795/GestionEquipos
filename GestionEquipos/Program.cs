@@ -22,22 +22,26 @@ namespace GestionEquipos
 
                 Console.WriteLine("Que desea hacer ?");
                 Console.WriteLine("1. Añadir un Equipo.");
-                Console.WriteLine("3. Añadir un Jugador.");
-
-                Console.WriteLine("4. Listar jugadores de un equipo.");
-                Console.WriteLine("5. Listar jugadores de un club.");
-
-                Console.WriteLine("6. Eliminar un Club.");
-                Console.WriteLine("7. Eliminar un Equipo.");
-                Console.WriteLine("8. Eliminar un Jugador.");
+                Console.WriteLine("2. Añadir un Jugador.");
+                Console.WriteLine("3. Listar jugadores de un equipo.");
+                Console.WriteLine("4. Listar jugadores de un club.");
+                Console.WriteLine("5. Eliminar un Equipo.");
+                Console.WriteLine("6. Eliminar un Jugador.");
                 Console.WriteLine("                      ");
-                Console.WriteLine("9. Transferir Jugador");
-                Console.WriteLine("10. Salir");
+                Console.WriteLine("6. Transferir Jugador");
+                Console.WriteLine("7. Salir");
                 opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
                 {
-                    case 1: 
+                    case 1: Club.AñadirEquipo();
+                    case 2: Equipo.AñadirJugador();
+                    case 3: Equipo.ListarJugadores();
+                    case 4: Club.ListarJugadores();
+                    case 5: Club.EliminarEquipo();
+                    case 6: Equipo.EliminarJugador();
+
+
                     default:
                         break;
                 }

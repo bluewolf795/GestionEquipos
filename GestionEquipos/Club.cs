@@ -8,12 +8,12 @@ namespace GestionEquipos
 {
     class Club
     {
-        private static List<Equipo> equipos;
+        protected static List<Equipo> equipos;
         private string nombre;
         private int anoFundacion;
         private string nombreEstadio;
 
-        public List<Equipo> Equipos { get { return equipos; } set { value = equipos; } }
+        public static List<Equipo> Equipos { get { return equipos; } set { value = equipos; } }
         public string Nombre { get { return nombre; } set { value = nombre; } }
         public int AnoFundacion { get { return anoFundacion; } set { value = anoFundacion; } }
         public string NombreEstadio { get { return nombreEstadio; } set { value = nombreEstadio; } }
@@ -28,7 +28,7 @@ namespace GestionEquipos
             this.anoFundacion = anoFundacion;
             this.nombreEstadio = nombreEstadio;
         }
-        public void ListarEquipos()
+        public static void ListarEquipos()
         {
             foreach (Equipo equipo in equipos)
             {
@@ -44,5 +44,6 @@ namespace GestionEquipos
         {
             Club.equipos.Add(equipo);
         }
+>>>>>>> 08e946d4478d02f17ec34879ebf60b26e536133a
     }
 }
