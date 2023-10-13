@@ -15,6 +15,10 @@ namespace GestionEquipos
         public string Nombre { get => nombre; set => nombre = value;}
         public string Categoria { get => categoria; set => categoria = value;}
 
+        public Equipo()
+        {
+
+        }
         public Equipo(string nombre,string categoria)
         {
             this.nombre = nombre;
@@ -59,9 +63,33 @@ namespace GestionEquipos
 
         }
 
-        public static void EliminarJugador(Jugador jugador)
+        public static void EliminarJugador()
         {
-            Equipo.jugadores.Remove(jugador);
+            Console.WriteLine("Que nombre tiene su jugador?");
+            string nombre = Console.ReadLine();
+
+            Console.WriteLine("Que dorsal tiene su jugador?");
+            int dorsal = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("En que equipo jugara este jugador?");
+            string nombreEquipo = Console.ReadLine();
+
+            Equipo guardado = new Equipo();
+
+            foreach (Equipo equipo in Club.Equipos)
+            {
+                if (nombreEquipo == equipo.Nombre)
+                {
+                    guardado = equipo;
+                }
+            }
+
+            foreach (Jugador jugador in guardado.Jugadores)
+            {
+                if( jugador == jugador(nombre,posicion,dorsal,Guardado)
+            }
+
+            Equipo.jugadores.Remove()
         }
     }
 }

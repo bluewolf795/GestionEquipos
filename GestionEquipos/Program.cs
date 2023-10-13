@@ -27,9 +27,8 @@ namespace GestionEquipos
                 Console.WriteLine("4. Listar jugadores de un club.");
                 Console.WriteLine("5. Eliminar un Equipo.");
                 Console.WriteLine("6. Eliminar un Jugador.");
-                Console.WriteLine("                      ");
-                Console.WriteLine("6. Transferir Jugador");
-                Console.WriteLine("7. Salir");
+                Console.WriteLine("7. Transferir Jugador");
+                Console.WriteLine("8. Salir");
                 opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
@@ -40,30 +39,17 @@ namespace GestionEquipos
                     case 4: Club.ListarJugadores();
                     case 5: Club.EliminarEquipo();
                     case 6: Equipo.EliminarJugador();
+                    case 7: Equipo.EliminarJugador();
+                    case 8: break;
 
 
                     default:
                         break;
                 }
 
-            }while (opcion != 10) ;
+            }while (opcion != 8) ;
 
         }
 
-        public static void CrearJugador()
-        {
-            Console.WriteLine("Que nombre tiene su jugador?");
-            string nombre = Console.ReadLine();
-
-            Console.WriteLine("Que dorsal tiene su jugador?");
-            string dorsal = Console.ReadLine();
-
-            Console.WriteLine("Que posicion tiene su jugador?");
-            string posicion = Console.ReadLine();
-
-            Console.WriteLine("En que equipo jugara este jugador?");
-            string nombreEquipo = Console.ReadLine();
-            
-        }
     }
 }
