@@ -28,7 +28,9 @@ namespace GestionEquipos
             this.anoFundacion = anoFundacion;
             this.nombreEstadio = nombreEstadio;
         }
-        public static void ListarEquipos()
+
+        Club Splai = new Club();
+        public void ListarEquipos()
         {
             foreach (Equipo equipo in equipos)
             {
@@ -36,13 +38,24 @@ namespace GestionEquipos
                 Console.WriteLine(nombre);
             }
         }
-        public void AñadirEquipo(Equipo equipo)
+        public void AñadirEquipo()
         {
-            Club.equipos.Add(equipo);
+            Console.WriteLine("Escribe el nombre del equipo");
+            string nombreEquipo = Console.ReadLine();
+            Console.WriteLine("Escriba la categoria del equipo");
+            string categoria = Console.ReadLine();
+            Equipo equipo = new Equipo(nombreEquipo, categoria);
+                Club.equipos.Add(equipo);
         }
-        public void EliminarEquipo(Equipo equipo)
+        public void EliminarEquipo()
         {
-            Club.equipos.Add(equipo);
+            Console.WriteLine("Escribe el nombre del equipo que quiere eliminar");
+            string nombreEquipo = Console.ReadLine();
+            foreach (Equipo equipo in equipos)
+            {
+                if (equipo.Nombre == nombreEquipo)
+                    Club.equipos.Remove(equipo);
+            }
         }
     }
 }

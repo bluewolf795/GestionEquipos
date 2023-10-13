@@ -21,6 +21,7 @@ namespace GestionEquipos
             this.categoria = categoria;
             jugadores = new List<Jugador>();
         }
+        
 
         public static void ListarJugadores()
         {
