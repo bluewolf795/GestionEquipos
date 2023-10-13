@@ -44,6 +44,5 @@ namespace GestionEquipos
         {
             Club.equipos.Add(equipo);
         }
->>>>>>> 08e946d4478d02f17ec34879ebf60b26e536133a
     }
 }
