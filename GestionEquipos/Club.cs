@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace GestionEquipos
 {
-    class Program
+    class Club
     {
-        static void Main(string[] args)
-        {
+        List<Equipo> equipos;
 
+       public Club()
+       {
 
-        }
+           equipos = new List<Equipo>();
+       }
     }
 }
