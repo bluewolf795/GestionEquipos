@@ -10,6 +10,7 @@ namespace GestionEquipos
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
