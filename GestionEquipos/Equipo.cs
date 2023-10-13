@@ -92,5 +92,39 @@ namespace GestionEquipos
 
             Equipo.jugadores.Remove()
         }
+        public static void TransferirJugador()
+        {
+            Console.WriteLine("Elige el equipo de origen");
+            Club.ListarJugadores();
+            string nombreEquipo = Console.ReadLine();
+            Equipo equipoOrigen = new Equipo();
+
+            foreach (Equipo equipo in Club.Equipos)
+            {
+                if (nombreEquipo == equipo.Nombre)
+                {
+                    equipoOrigen = equipo;
+                }
+            }
+
+            Console.WriteLine("Elige el jugador");
+            Equipo.ListarJugadores();
+            
+
+
+            Console.WriteLine("Elige el equipo de destino");
+            string nombreEquipo2 = Console.ReadLine();
+            Equipo equipoDestino = new Equipo();
+
+            foreach (Equipo equipo in Club.Equipos)
+            {
+                if (nombreEquipo2 == equipo.Nombre)
+                {
+                    equipoDestino = equipo;
+                }
+            }
+
+            
+        }
     }
 }
