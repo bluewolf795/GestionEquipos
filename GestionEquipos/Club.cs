@@ -8,7 +8,7 @@ namespace GestionEquipos
 {
     class Club
     {
-        private List<Equipo> equipos;
+        private static List<Equipo> equipos;
         private string nombre;
         private int anoFundacion;
         private string nombreEstadio;
@@ -28,7 +28,21 @@ namespace GestionEquipos
             this.anoFundacion = anoFundacion;
             this.nombreEstadio = nombreEstadio;
         }
-
-
+        public void ListarEquipos()
+        {
+            foreach (Equipo equipo in equipos)
+            {
+                string nombre = equipo.Nombre;
+                Console.WriteLine(nombre);
+            }
+        }
+        public void AñadirEquipo(Equipo equipo)
+        {
+            Club.equipos.Add(equipo);
+        }
+        public void EliminarEquipo(Equipo equipo)
+        {
+            Club.equipos.Add(equipo);
+        }
     }
 }
