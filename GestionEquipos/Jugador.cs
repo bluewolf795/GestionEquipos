@@ -17,7 +17,6 @@ namespace GestionEquipos
         public string Posicion { get { return posicion; } set { posicion = value; } }
         public int Dorsal { get { return dorsal; } set { dorsal = value; } }
         public Equipo Equipo { get { return equipo; } set { equipo = value; } }
-
         public Jugador() { }
         public Jugador(string nombre, string posicion, int dorsal, Equipo equipo)
         {
