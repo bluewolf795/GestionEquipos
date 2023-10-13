@@ -46,6 +46,9 @@ namespace GestionEquipos
                         break;
                     case 6: Equipo.EliminarJugador();
                         break;
+                    case 7:
+                        Jugador.TransferirJugador();
+                        break;
 
 
                     default:

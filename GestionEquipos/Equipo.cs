@@ -87,10 +87,12 @@ namespace GestionEquipos
 
             foreach (Jugador jugador in guardado.Jugadores)
             {
-                if( jugador == jugador(nombre,posicion,dorsal,Guardado)
+                if (jugador.Nombre == nombre && jugador.Dorsal == dorsal)
+                {
+                    Equipo.jugadores.Remove(jugador);
+                }
             }
 
-            Equipo.jugadores.Remove()
         }
     }
 }
