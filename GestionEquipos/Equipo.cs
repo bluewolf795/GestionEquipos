@@ -8,25 +8,37 @@ namespace GestionEquipos
 {
     class Equipo
     {
-        List<Jugador> jugadores;
+        private static List<Jugador> jugadores;
+        private string nombre;
+        private string categoria;
 
-        public Equipo()
+        public string Nombre { get => nombre; set => nombre = value;}
+        public string Categoria { get => categoria; set => categoria = value;}
+
+        public Equipo(string nombre,string categoria)
         {
+            this.Nombre = nombre;
+            this.categoria = categoria;
             jugadores = new List<Jugador>();
         }
 
-        public static ListarJugadores()
+        public static void ListarJugadores()
         {
             foreach (var jugador in jugadores)
             {
                 string nombre = jugador.Nombre;
-                console.WriteLine(nombre);
+                Console.WriteLine(nombre);
             }
         }
 
-        public static AñadirJugador()
+        public static void AñadirJugador(Jugador jugador)
         {
+            Equipo.jugadores.Add(jugador);
+        }
 
+        public static void EliminarJugador(Jugador jugador)
+        {
+            Equipo.jugadores.Remove(jugador);
         }
     }
 }

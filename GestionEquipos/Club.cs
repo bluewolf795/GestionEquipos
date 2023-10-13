@@ -12,7 +12,6 @@ namespace GestionEquipos
 
        public Club()
        {
-
            equipos = new List<Equipo>();
        }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionEquipos
 {
-    internal class Jugador
+    class Jugador
     {
         private string nombre;
         private string posicion;
