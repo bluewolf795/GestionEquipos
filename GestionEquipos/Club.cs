@@ -38,7 +38,15 @@ namespace GestionEquipos
                 Console.WriteLine(nombre);
             }
         }
-        public void AñadirEquipo()
+        public static void ListarJugadores()
+        {
+            foreach (Equipo equipo in equipos)
+            {
+                foreach (Jugador jugador in equipo.Jugadores)
+                    Console.WriteLine("Equipo: " + equipo.Nombre + " Jugador: " + jugador);
+            }
+        }
+        public static void AñadirEquipo()
         {
             Console.WriteLine("Escribe el nombre del equipo");
             string nombreEquipo = Console.ReadLine();
@@ -47,7 +55,7 @@ namespace GestionEquipos
             Equipo equipo = new Equipo(nombreEquipo, categoria);
                 Club.equipos.Add(equipo);
         }
-        public void EliminarEquipo()
+        public static void EliminarEquipo()
         {
             Console.WriteLine("Escribe el nombre del equipo que quiere eliminar");
             string nombreEquipo = Console.ReadLine();

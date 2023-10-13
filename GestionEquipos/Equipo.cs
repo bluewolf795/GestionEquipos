@@ -14,6 +14,7 @@ namespace GestionEquipos
 
         public string Nombre { get => nombre; set => nombre = value;}
         public string Categoria { get => categoria; set => categoria = value;}
+        public List<Jugador> Jugadores { get => jugadores; set => jugadores = value; }
 
         public Equipo(string nombre,string categoria)
         {
